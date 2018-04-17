@@ -1,0 +1,10 @@
+{
+"basepage":{
+	"url":"http://www.way2automation.com/angularjs-protractor/multiform/#/form/profile"
+	},
+"userinfo":{
+	"username":"divya",
+	"pass":"a@d.com"
+		}
+
+}

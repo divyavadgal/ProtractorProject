@@ -1,0 +1,1 @@
+protractor-flake --parser standard --node-bin node --max-attempts=3 --color=magenta -- simpleconf.js

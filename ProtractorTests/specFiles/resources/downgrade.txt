@@ -1,0 +1,34 @@
+To Downgrade follow these steps:
+
+1.Clean the webdrivers already installed:
+
+	webdriver-manager clean
+
+2.Update the webdriver with specific version:
+
+webdriver-manager update --ie --versions.standalone=3.4.0 --versions.ie=3.4.0(ex: --versions.chrome=))
+
+3.Start webdriver with specific version:
+
+webdriver-manager start --versions.standalone=3.4.0 
+webdriver-manager update --versions.standalone=3.2.0
+
+npm install -g selenium-webdriver@2.47.0
+
+npm install -g protractor@5.1.1
+
+
+In the simplest terms, the tilde matches the most recent minor version (the middle number). 
+~1.2.3 will match all 1.2.x versions but will miss 1.3.0.
+
+The caret, on the other hand, is more relaxed. It will update you to the most recent 
+major version (the first number). ^1.2.3 will match any 1.x.x release including 1.3.0,
+but will hold off on 2.0.0.
+
+~version "Approximately equivalent to version" See npm semver - Tilde Ranges & semver (7)
+^version "Compatible with version" See npm semver - Caret Ranges & semver (7)
+version Must match version exactly
+>version Must be greater than version
+>=version etc
+<version
+<=version
