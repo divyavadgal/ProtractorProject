@@ -1,0 +1,21 @@
+element(by.cssContainingText('option', 'BeaverBox Testing')).click();
+
+element.all(by.css("#userSelect option"))
+ element.all(by.css('select option'))
+
+element(by.model("custId")).$("[value='2']").click();
+
+element.all(by.repeater("result in memory")).get(0).getText()--->first element
+element.all(by.repeater("result in memory").column("result.timestamp")).getText()--->column
+
+
+for(i=0;i<t.length;i++)
+{
+			var row = element.all(by.repeater("result in memory")).get(i);
+			var cells = row.all(by.tagName("td"));
+			var cellTexts = cells.map(function (elm) {
+			    elm.getText().then(function(v){
+			    console.log(v)
+			    	});
+			});
+}

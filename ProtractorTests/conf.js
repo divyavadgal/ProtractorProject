@@ -22,7 +22,7 @@ exports.config = {
 				//['./regression/cal.js'],
 			//['./ReadingData/xldata.js'],
 			
-			['./specFiles/spec.js'],
+			['./specFiles/testSpecs/Calculator.js'],
 		
 		jasmineNodeOpts: {
 					    defaultTimeoutInterval: 30000,
