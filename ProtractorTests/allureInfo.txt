@@ -1,0 +1,36 @@
+install jasmine allure  reporter
+go to project location-->open cmd prompt-->type
+I:\project codes\protractor projects\ProtractorTests>npm install jasmine-allure-reporter@0.2.3
+
+jasmine allure folder created under node modules
+inside jasmine allure report folder pom.xml is present
+
+execute the test adding fallowing in the config file
+
+var AllureReporter = require('jasmine-allure-reporter');
+exports.config = {
+		directConnect: true,
+		framework: 'jasmine2',
+		//seleniumAddress: 'http://localhost:4444/wd/hub',
+		specs:	['../specFiles/testSpecs/CalculatorSpec.js'],
+		
+		 onPrepare: function() {
+			    var AllureReporter = require('jasmine-allure-reporter');
+			    jasmine.getEnv().addReporter(new AllureReporter({
+			      resultsDir: 'allure-results'  or "../node_modules/jasmine-allure-reporter/allure-results" //use the path of pom.xml in allure folder to remove copying
+			    }));
+			  }
+}	
+
+
+allure-results folder created after the test execution. copy whole folder into jasmine allure report folder
+where you have pom.xml
+open cmd prompt in this folder and type
+
+I:\project codes\protractor projects\ProtractorTests\node_modules\jasmine-allure
+-reporter>mvn site -Dallure.results_pattern=allure-results
+
+you will get build success
+
+after this target folder will be created i the same folder
+open-->site-->project report html folder will be created open it-->get the report

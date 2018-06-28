@@ -7,10 +7,16 @@ exports.config = {
 	frameworkPath : require.resolve('protractor-cucumber-framework'),
 
 	// require feature files
-	specs : [ './specFiles/features/first.feature' // accepts a glob
+	specs : [ '../specFiles/features/first.feature' // accepts a glob
 	],
+	capabilities: {
+	    'browserName': 'chrome'
+	  },
 
 	cucumberOpts : {
+		require :'../specFiles/cucumberStepDefi/*.js',
+		 tags: '@dev',
+		 'no-colors': true
 		/*tags: false,
 	    format: 'pretty',
 	    profile: false,
@@ -20,7 +26,13 @@ exports.config = {
 		format : [ 'progress', 'pretty:output.txt' ],
 */
 		// require step definitions
-		require : [ './specFiles/cucumberStepDefi/.steps.js' // accepts a glob
-		]
+		/*require : ['../specFiles/cucumberStepDefi/Steps.js' // accepts a glob
+		]*/
+		//require :'../specFiles/cucumberStepDefi/*.js'
+			/*['../specFiles/cucumberStepDefi/Steps.js', // accepts a glob
+					'../index.js',
+					'../node_modules/protractor-cucumber-framework/index.js'
+			]*/
+			
 	}
 }
