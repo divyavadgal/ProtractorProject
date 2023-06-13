@@ -1,4 +1,5 @@
 exports.config = {
+	//extra line
 		//directConnect: true, 
 		'seleniumAddress': 'http://hub-cloud.browserstack.com/wd/hub',
 		//seleniumAddress: 'http://localhost:4444/wd/hub',
